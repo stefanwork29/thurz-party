@@ -141,7 +141,7 @@ export const pageQuery = graphql`
       }
     }
     hero: allImageSharp(
-      filter: { original: { src: { regex: "/golden-gate/" } } }
+      filter: { original: { src: { regex: "/hero/" } } }
     ) {
       edges {
         node {
