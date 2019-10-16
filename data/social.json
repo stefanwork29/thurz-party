@@ -1,14 +1,14 @@
 [
-  {
-    "type": "linkedin",
-    "url": "https://www.linkedin.com/in/aleksanderhansson/"
-  },
-  {
-    "type": "github",
-    "url": "https://github.com/ahansson89"
-  },
-  {
-    "type": "mail",
-    "url": "#contact"
-  }
+	{
+		"type": "linkedin",
+		"url": "https://www.linkedin.com/in/aleksanderhansson/"
+	},
+	{
+		"type": "github",
+		"url": "https://github.com/ahansson89"
+	},
+	{
+		"type": "mail",
+		"url": "#rsvp"
+	}
 ]

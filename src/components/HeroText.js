@@ -8,7 +8,7 @@ const StyledTypist = styled(Typist)`
   color: #fff;
   letter-spacing: 17px;
   margin: 0 auto;
-  font-size: 72px;
+  font-size: 50px;
   line-height: 80px;
   font-weight: 100;
   text-transform: uppercase;
@@ -36,25 +36,35 @@ class HeroText extends React.Component {
     } else {
       return (
         <StyledTypist cursor={{ show: false }} {...this.props}>
-          <strong key={1}>I</strong> Muharram Potentate and Commandress Ball
-          <Typist.Backspace count={19} delay={1000} />
-          <span key={2}> Architect Complex IT Systems</span>
-          <Typist.Backspace count={29} delay={1000} />
+          <strong key={1}>Party In My Living Room</strong>
+          <Typist.Backspace count={0} delay={1500} />
+          <span key={2}>
+            {' '}
+            <strong>Los Angeles, CA</strong>
+          </span>
+          <Typist.Backspace count={0} delay={1500} />
           <span key={3}>
             {' '}
-            Am Certified In Amazon Web Services & Google Cloud Platform
+            <strong>
+              Performances by Tiffany Gouche, Thurz, Iman Omari and many more
+            </strong>
           </span>
-          <Typist.Backspace count={60} delay={1000} />
-          <span key={4}> Live In The Bay Area</span>
+          <Typist.Backspace count={63} delay={1500} />
+          <span key={4}></span>
           <Typist.Delay ms={300} />
-          <span key={5}>.</span>
+          <span key={5}>
+            <strong>.</strong>
+          </span>
           <Typist.Delay ms={600} />
-          <span key={6}>.</span>
+          <span key={6}>
+            <strong>.</strong>
+          </span>
           <Typist.Delay ms={900} />
-          <span key={7}>.</span>
-          <Typist.Backspace count={25} delay={10} />
-          <strong key={8}>But Mostly I Just</strong> Do Awesome Stuff With
-          Technology
+          <span key={7}>
+            <strong>.</strong>
+          </span>
+          <Typist.Backspace count={0} delay={10} />
+          <strong key={8}> RSVP NOW press the enevlope below</strong>
         </StyledTypist>
       )
     }

@@ -16,8 +16,8 @@ const IconWrapper = styled.div`
   margin: 0 auto;
   svg {
     color: white;
-    width: 1em;
-    height: 1em;
+    width: 3em;
+    height: em;
     padding: 1.5em;
   }
 `
@@ -31,12 +31,8 @@ class Social extends React.Component {
 
     return (
       <IconWrapper>
-        <Link aria-label={linkedin.node.type} to={linkedin.node.url}>
-          <LinkedinIcon />
-        </Link>
-        <Link aria-label={github.node.type} to={github.node.url}>
-          <GithubIcon />
-        </Link>
+        {/* <Link aria-label={linkedin.node.type} to={linkedin.node.url}><LinkedinIcon/></Link>
+        <Link aria-label={github.node.type} to={github.node.url}><GithubIcon/></Link> */}
         <ButtonLink
           aria-label={github.node.type}
           onClick={() => {
