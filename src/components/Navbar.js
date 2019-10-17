@@ -21,7 +21,7 @@ const Base = styled.div`
     padding: 0;
     margin: 0;
     list-style: none;
-    font-size: 13px;
+    font-size: 24px;
   }
 `
 
@@ -44,7 +44,7 @@ const MenuItem = styled(ButtonLink)`
   letter-spacing: 1px;
   margin-right: 32px;
   height: 62px;
-  font-size: 11px;
+  font-size: 18px;
   float: right;
   position: relative;
   color: #fff;
