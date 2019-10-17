@@ -2,11 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import styled, { css } from 'styled-components'
 import { Flex, Box } from 'grid-styled'
-import Link from '../components/Link'
-import Experience from '../components/Experience'
-import Certifications from '../components/Certifications'
-import Technologies from '../components/Technologies'
-import Educations from '../components/Educations'
 import ContactForm from '../components/ContactForm'
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
@@ -96,72 +91,72 @@ const IndexPage = ({ data }) => (
 export default IndexPage
 
 export const pageQuery = graphql`
-  query indexQuery {
-    allSocialJson {
-      edges {
-        node {
-          url
-          type
-        }
-      }
-    }
-    allExperienceJson {
-      edges {
-        node {
-          id
-          company
-          title
-          start
-          end
-        }
-      }
-    }
-    allCertificationsJson {
-      edges {
-        node {
-          name
-          id
-          start
-          end
-          authority
-        }
-      }
-    }
-    allLogos: allImageSharp(
-      filter: { original: { src: { regex: "/logo/" } } }
-      sort: { fields: original___src }
-    ) {
-      edges {
-        node {
-          id
-          fixed(height: 80, grayscale: true) {
-            ...GatsbyImageSharpFixed_withWebp_tracedSVG
-          }
-        }
-      }
-    }
-    hero: allImageSharp(
-      filter: { original: { src: { regex: "/hero/" } } }
-    ) {
-      edges {
-        node {
-          id
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-    allEducationJson {
-      edges {
-        node {
-          id
-          school
-          program
-          start
-          end
-        }
-      }
-    }
-  }
-`
+         query indexQuery {
+           allSocialJson {
+             edges {
+               node {
+                 url
+                 type
+               }
+             }
+           }
+           allExperienceJson {
+             edges {
+               node {
+                 id
+                 company
+                 title
+                 start
+                 end
+               }
+             }
+           }
+           allCertificationsJson {
+             edges {
+               node {
+                 name
+                 id
+                 start
+                 end
+                 authority
+               }
+             }
+           }
+           allLogos: allImageSharp(
+             filter: { original: { src: { regex: "/logo/" } } }
+             sort: { fields: original___src }
+           ) {
+             edges {
+               node {
+                 id
+                 fixed(height: 80, grayscale: true) {
+                   ...GatsbyImageSharpFixed_withWebp_tracedSVG
+                 }
+               }
+             }
+           }
+           hero: allImageSharp(
+             filter: { original: { src: { regex: "/hero/" } } }
+           ) {
+             edges {
+               node {
+                 id
+                 fluid(quality: 100) {
+                   ...GatsbyImageSharpFluid_withWebp
+                 }
+               }
+             }
+           }
+           allEducationJson {
+             edges {
+               node {
+                 id
+                 school
+                 program
+                 start
+                 end
+               }
+             }
+           }
+         }
+       `
