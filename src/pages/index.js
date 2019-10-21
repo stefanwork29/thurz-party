@@ -7,8 +7,8 @@ import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import HeroText from '../components/HeroText'
 import Social from '../components/Social'
-
 import { media } from '../utils/style'
+import Img from 'gatsby-image'
 
 const StyledHero = styled(Hero)`
   margin-top: -62px;
@@ -58,6 +58,7 @@ const IndexPage = ({ data }) => (
             and social engagement all curated by Los Angeles based hiphop artist
             Thurz.
           </p>
+<Img fixed={data.image.childImageSharp.fixed} />
         </Box>
       </Flex>
     </Section>
@@ -155,6 +156,18 @@ export const pageQuery = graphql`
                  program
                  start
                  end
+               }
+             }
+           }
+         }
+         query Images {
+           image: file(relativePath: { eq: "lathurz.jpg" }) {
+             childImageSharp {
+               fixed(width: 400) {
+                 ...GatsbyImageSharpFixed
+               }
+               fluid {
+                 ...GatsbyImageSharpFluid
                }
              }
            }

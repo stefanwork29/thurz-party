@@ -31,7 +31,9 @@
 		"typeface-raleway": "^0.0.54",
 		"whatwg-fetch": "2.0.4"
 	},
-	"keywords": [ "gatsby" ],
+	"keywords": [
+		"gatsby"
+	],
 	"license": "MIT",
 	"scripts": {
 		"build": "gatsby build",
