@@ -43,18 +43,24 @@ const BgImage = styled(Image)`
 `
 const ImageCarousel = styled.div`
   margin-top: -62px;
-  z-index: -1;
   & img {
     height: calc(100vh + 62px) !important;
+  }
+  .slick-prev {
+    left: 25px;
+    z-index: 100;
+  }
+  .slick-next {
+    right: 25px;
   }
 `
 const settings = {
   infinite: true,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 3000,
   speed: 500,
   slidesToShow: 1,
-  slidesToScroll: 1
+  slidesToScroll: 1,
 }
 
 class Hero extends React.Component {
