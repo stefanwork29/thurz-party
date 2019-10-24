@@ -1,11 +1,12 @@
 import React from 'react'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Container = styled.div`
-  display: flex;
-  position: relative;
-  align-items: center;
+  height: 100vh;
 `
 
 const Overlay = styled.div`
@@ -29,7 +30,7 @@ const BgImage = styled(Image)`
   left: 0;
   width: 100%;
   z-index: -1;
-  height: ${props => props.height || '100vh'};
+  height: ${props => props.height || 'calc(100vh + 62px)'};
 
   // Adjust image positioning (if image covers area with defined height) and add font-family for polyfill
   & > img {
@@ -40,13 +41,40 @@ const BgImage = styled(Image)`
   props.position || '50% 50%'} !important;'
   }
 `
+const ImageCarousel = styled.div`
+  margin-top: -62px;
+  z-index: -1;
+  & img {
+    height: calc(100vh + 62px) !important;
+  }
+`
+const settings = {
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1
+}
 
 class Hero extends React.Component {
   render() {
     const { children } = this.props
     return (
       <Container>
-        <BgImage {...this.props} />
+        <ImageCarousel> 
+          <Slider {...settings}>
+            <div>
+              <BgImage {...this.props} />
+            </div>
+            <div>
+              <BgImage {...this.props} />
+            </div>
+            <div>
+              <BgImage {...this.props} />
+            </div>
+          </Slider>
+        </ImageCarousel>
         <Overlay>{children}</Overlay>
       </Container>
     )
